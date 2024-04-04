@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SparkLine() {
+function SparkLine () {
   return (
     <div>SparkLine</div>
   )

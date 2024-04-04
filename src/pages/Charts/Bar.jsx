@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Bar() {
+function Bar () {
   return (
     <div>Bar</div>
   )

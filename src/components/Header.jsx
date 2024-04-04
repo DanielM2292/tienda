@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Head() {
+function Head () {
   return (
     <div>Head</div>
   )

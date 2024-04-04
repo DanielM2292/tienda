@@ -1,27 +1,34 @@
-import React, { createContext, useContext, useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { createContext, useContext, useState } from 'react'
 
-const StateContext = createContext();
+const StateContext = createContext()
 
 const initialState = {
   chat: false,
   cart: false,
   userProfile: false,
   notification: false
-};
+}
 
 export const ContextProvider = ({ children }) => {
-  const [activeMenu, setActiveMenu] = useState(true);
-  
+  const [activeMenu, setActiveMenu] = useState(true)
+  const [isClicked, setIsClicked] = useState(initialState)
+  const handleClick = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: true })
+  }
   return (
-    <StateContext.Provider 
-    value={{ 
-      activeMenu, 
-      setActiveMenu
-    }}
-      >
+    <StateContext.Provider
+      value={{
+        activeMenu,
+        setActiveMenu,
+        isClicked,
+        setIsClicked,
+        handleClick
+      }}
+    >
       {children}
     </StateContext.Provider>
-  );
-};
+  )
+}
 
-export const useStateContext = () => useContext(StateContext);
+export const useStateContext = () => useContext(StateContext)

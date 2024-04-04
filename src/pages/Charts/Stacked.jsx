@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Stacked() {
+function Stacked () {
   return (
     <div>Stacked</div>
   )
