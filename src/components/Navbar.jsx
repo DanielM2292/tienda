@@ -4,48 +4,36 @@ import { FiShoppingCart } from 'react-icons/fi'
 import { BsChatLeft } from 'react-icons/bs'
 import { RiNotification3Line } from 'react-icons/ri'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-// eslint-disable-next-line no-unused-vars
-import { Cart, Chat, Notification, UserProfile, userProfile } from '.'
+import { Cart, Chat, Notification, UserProfile } from '.'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import avatar from '../data/avatar.jpg'
 import { useStateContext } from '../contexts/ContextProvider'
 
-const NavButton = ({ title, customFunc, icon, color, dotColor }) => {
-  return (
-    <TooltipComponent content={title} position='BottomCenter'>
-      <button
-        type='button'
-        onClick={customFunc}
-        style={{ color }}
-        className='relative text-xl rounded-full p-3 hover:bg-light-gray'
+const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
+  <TooltipComponent content={title} position='BottomCenter'>
+    <button
+      type='button'
+      onClick={customFunc}
+      style={{ color }}
+      className='relative text-xl rounded-full p-3 hover:bg-black' // light-gray
+    >
+      <span
+        style={{ background: dotColor }}
+        className='absolute inline-flex rounded-full h-2 w-2 right-2 top-2'
       >
-        <span
-          style={{ background: dotColor }}
-          className='absolute inline-flex rounded-full h-2 w-2 right-2 top-2'
-        >
-          {icon}
-        </span>
-      </button>
-    </TooltipComponent>
-  )
-}
+        {icon}
+      </span>
+    </button>
+  </TooltipComponent>
+)
 
 function Navbar () {
   const {
     // eslint-disable-next-line no-unused-vars
-    currentColor,
-    // eslint-disable-next-line no-unused-vars
-    activeMenu,
-    setActiveMenu,
-    handleClick,
-    // eslint-disable-next-line no-unused-vars
-    isClicked,
-    // eslint-disable-next-line no-unused-vars
-    screenSize,
-    // eslint-disable-next-line no-unused-vars
-    setScreenSize
+    currentColor, activeMenu, setActiveMenu, handleClick, isClicked, screenSize, setScreenSize
   } = useStateContext()
+
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth)
     window.addEventListener('resize', handleResize)
@@ -66,7 +54,7 @@ function Navbar () {
       <NavButton
         title='Menu'
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
-        color='gray'
+        color={currentColor}
         icon={
           <div style={{ fontSize: '18px' }}>
             <AiOutlineMenu />
@@ -76,22 +64,22 @@ function Navbar () {
       <div className='flex'>
         <NavButton
           title='Cart'
-          customFunc={() => handleClick('chat')}
-          color='gray'
+          customFunc={() => handleClick('cart')}
+          color={currentColor}
           icon={<FiShoppingCart />}
         />
         <NavButton
           title='Chat'
-          dotColor='#03C1D7'
+          dotColor='#03C9d7'
           customFunc={() => handleClick('chat')}
-          color='gray'
+          color={currentColor}
           icon={<BsChatLeft />}
         />
         <NavButton
           title='Notification'
-          dotColor='#03C1D7'
+          dotColor='#03C9d7'
           customFunc={() => handleClick('notification')}
-          color='gray'
+          color={currentColor}
           icon={<RiNotification3Line />}
         />
         <TooltipComponent content='Profile' position='BottomCenter'>
@@ -102,11 +90,11 @@ function Navbar () {
             <img
               className='rounded-full w-8 h-8'
               src={avatar}
-              alt='imagen perfil de usuario'
+              alt='Imagen de perfil de usuario'
             />
             <p>
-              <span className='text-gray-400 text-14'>Hola</span>{' '}
-              <span className='text-gray-400 font-bold ml-4 text-14'>
+              <span className='text-black-400 text-14'>Hola, </span>{' '}
+              <span className='text-black-400 font-bold ml-4 text-14'>
                 ChatBoot
               </span>
             </p>

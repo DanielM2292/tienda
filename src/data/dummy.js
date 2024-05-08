@@ -861,11 +861,11 @@ export const medicalproBranding = {
 export const themeColors = [
   {
     name: 'blue-theme',
-    color: '#6b6b6e'
+    color: '#1A97F5'
   },
   {
     name: 'green-theme',
-    color: '#199249'
+    color: '#03C9D7'
   },
   {
     name: 'purple-theme',
@@ -873,7 +873,7 @@ export const themeColors = [
   },
   {
     name: 'red-theme',
-    color: '#d65e09'
+    color: '#FF5C8E'
   },
   {
     name: 'indigo-theme',
@@ -1530,7 +1530,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar3
+    avatar3
   },
   {
     EmployeeID: 2,
@@ -1600,7 +1600,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -1671,7 +1671,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar
+    avatar
   },
   {
     EmployeeID: 2,
@@ -1741,7 +1741,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -1812,7 +1812,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -1883,7 +1883,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -1954,7 +1954,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -2025,7 +2025,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -2096,7 +2096,7 @@ export const employeesData = [
     Country: 'USA',
     ReportsTo: 'Carson',
     EmployeeImage:
-      avatar2
+    avatar2
 
   },
   {
@@ -2216,7 +2216,7 @@ export const ordersData = [
     Status: 'rejected',
     StatusBg: 'red',
     ProductImage:
-      product1
+    product1
   },
   {
     OrderID: 94757,
